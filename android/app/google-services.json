@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "932495198925",
+    "project_id": "daily-life-7320",
+    "storage_bucket": "daily-life-7320.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932495198925:android:c4dc355633c0050a12b784",
+        "android_client_info": {
+          "package_name": "com.zalzaela.flutter_daily_life"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932495198925-5vevvnalcljhagh6vdl49j8668ioe24e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zalzaela.flutter_daily_life",
+            "certificate_hash": "3636ea77ca7cd2e910e302e27077eb063cd6b8ce"
+          }
+        },
+        {
+          "client_id": "932495198925-l0daenfs7utifqvqqouuaa90ra2qfeh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg1oWPMOQ5R0wkHIy6pvxdabPzVQlwQhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932495198925-l0daenfs7utifqvqqouuaa90ra2qfeh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

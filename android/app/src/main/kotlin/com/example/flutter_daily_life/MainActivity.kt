@@ -1,4 +1,4 @@
-package com.example.flutter_daily_life
+package com.zalzaela.flutter_daily_life
 
 import io.flutter.embedding.android.FlutterActivity
 
