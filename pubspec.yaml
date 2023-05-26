@@ -38,6 +38,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   fluttertoast: ^8.2.1
+  font_awesome_flutter: ^10.4.0
   freezed_annotation: ^2.2.0
   intl: ^0.18.0
   json_annotation: ^4.8.1

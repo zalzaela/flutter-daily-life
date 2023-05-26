@@ -22,6 +22,9 @@ IncomeModel _$IncomeModelFromJson(Map<String, dynamic> json) {
 mixin _$IncomeModel {
   String get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
+  String get category => throw _privateConstructorUsedError;
+  String get account => throw _privateConstructorUsedError;
+  String get notes => throw _privateConstructorUsedError;
   int get amount => throw _privateConstructorUsedError;
   Timestamp get timestamp => throw _privateConstructorUsedError;
   bool get status => throw _privateConstructorUsedError;
@@ -39,7 +42,14 @@ abstract class $IncomeModelCopyWith<$Res> {
       _$IncomeModelCopyWithImpl<$Res, IncomeModel>;
   @useResult
   $Res call(
-      {String id, String title, int amount, Timestamp timestamp, bool status});
+      {String id,
+      String title,
+      String category,
+      String account,
+      String notes,
+      int amount,
+      Timestamp timestamp,
+      bool status});
 }
 
 /// @nodoc
@@ -57,6 +67,9 @@ class _$IncomeModelCopyWithImpl<$Res, $Val extends IncomeModel>
   $Res call({
     Object? id = null,
     Object? title = null,
+    Object? category = null,
+    Object? account = null,
+    Object? notes = null,
     Object? amount = null,
     Object? timestamp = null,
     Object? status = null,
@@ -69,6 +82,18 @@ class _$IncomeModelCopyWithImpl<$Res, $Val extends IncomeModel>
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String,
+      account: null == account
+          ? _value.account
+          : account // ignore: cast_nullable_to_non_nullable
+              as String,
+      notes: null == notes
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
               as String,
       amount: null == amount
           ? _value.amount
@@ -95,7 +120,14 @@ abstract class _$$_InomeModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id, String title, int amount, Timestamp timestamp, bool status});
+      {String id,
+      String title,
+      String category,
+      String account,
+      String notes,
+      int amount,
+      Timestamp timestamp,
+      bool status});
 }
 
 /// @nodoc
@@ -111,6 +143,9 @@ class __$$_InomeModelCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? title = null,
+    Object? category = null,
+    Object? account = null,
+    Object? notes = null,
     Object? amount = null,
     Object? timestamp = null,
     Object? status = null,
@@ -123,6 +158,18 @@ class __$$_InomeModelCopyWithImpl<$Res>
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String,
+      account: null == account
+          ? _value.account
+          : account // ignore: cast_nullable_to_non_nullable
+              as String,
+      notes: null == notes
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
               as String,
       amount: null == amount
           ? _value.amount
@@ -147,6 +194,9 @@ class _$_InomeModel implements _InomeModel {
   const _$_InomeModel(
       {required this.id,
       required this.title,
+      required this.category,
+      required this.account,
+      required this.notes,
       required this.amount,
       required this.timestamp,
       this.status = true});
@@ -159,6 +209,12 @@ class _$_InomeModel implements _InomeModel {
   @override
   final String title;
   @override
+  final String category;
+  @override
+  final String account;
+  @override
+  final String notes;
+  @override
   final int amount;
   @override
   final Timestamp timestamp;
@@ -168,7 +224,7 @@ class _$_InomeModel implements _InomeModel {
 
   @override
   String toString() {
-    return 'IncomeModel(id: $id, title: $title, amount: $amount, timestamp: $timestamp, status: $status)';
+    return 'IncomeModel(id: $id, title: $title, category: $category, account: $account, notes: $notes, amount: $amount, timestamp: $timestamp, status: $status)';
   }
 
   @override
@@ -178,6 +234,10 @@ class _$_InomeModel implements _InomeModel {
             other is _$_InomeModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
+            (identical(other.account, account) || other.account == account) &&
+            (identical(other.notes, notes) || other.notes == notes) &&
             (identical(other.amount, amount) || other.amount == amount) &&
             (identical(other.timestamp, timestamp) ||
                 other.timestamp == timestamp) &&
@@ -186,8 +246,8 @@ class _$_InomeModel implements _InomeModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, title, amount, timestamp, status);
+  int get hashCode => Object.hash(runtimeType, id, title, category, account,
+      notes, amount, timestamp, status);
 
   @JsonKey(ignore: true)
   @override
@@ -207,6 +267,9 @@ abstract class _InomeModel implements IncomeModel {
   const factory _InomeModel(
       {required final String id,
       required final String title,
+      required final String category,
+      required final String account,
+      required final String notes,
       required final int amount,
       required final Timestamp timestamp,
       final bool status}) = _$_InomeModel;
@@ -218,6 +281,12 @@ abstract class _InomeModel implements IncomeModel {
   String get id;
   @override
   String get title;
+  @override
+  String get category;
+  @override
+  String get account;
+  @override
+  String get notes;
   @override
   int get amount;
   @override

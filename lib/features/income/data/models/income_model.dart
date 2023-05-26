@@ -10,6 +10,9 @@ class IncomeModel with _$IncomeModel {
   const factory IncomeModel({
     required String id,
     required String title,
+    required String category,
+    required String account,
+    required String notes,
     required int amount,
     required Timestamp timestamp,
     @Default(true) bool status,
@@ -22,6 +25,9 @@ class IncomeModel with _$IncomeModel {
     return IncomeModel(
       id: snapshot.id,
       title: snapshot.get('title') as String,
+      category: snapshot.get('category') as String,
+      account: snapshot.get('account') as String,
+      notes: snapshot.get('notes') as String,
       amount: snapshot.get('amount') as int,
       timestamp:
           const TimestampConverter().fromJson(snapshot.get('timestamp') as int),

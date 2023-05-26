@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_daily_life/features/income/pages/income_page.dart';
+import 'package:flutter_daily_life/shared/utils/utils.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,39 +8,34 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Home",
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Colors.blue,
-        centerTitle: true,
-        elevation: 1,
+      appBar: const CustomAppBar(
+        title: "Home",
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-        child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const IncomePage(),
-                  ));
-                },
-                child: Container(
-                  color: Colors.blueAccent,
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  child: const Text(
-                    "Income",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-            ],
-          ),
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // const Dashboard(),
+            const SizedBox(height: 16.0),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const IncomePage(),
+                ));
+              },
+              child: const Text('Income'),
+            ),
+            const SizedBox(height: 16.0),
+            ElevatedButton(
+              onPressed: () {
+                // Navigator.of(context).push(MaterialPageRoute(
+                //     builder: (context) => const SpendingPage(),
+                //   ));
+              },
+              child: const Text('Spending'),
+            ),
+          ],
         ),
       ),
     );
