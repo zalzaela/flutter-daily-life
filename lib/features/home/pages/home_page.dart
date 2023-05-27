@@ -3,6 +3,7 @@ import 'package:flutter_daily_life/features/income/pages/income_form.dart';
 import 'package:flutter_daily_life/features/income/pages/income_page.dart';
 import 'package:flutter_daily_life/features/spending/pages/spending_form.dart';
 import 'package:flutter_daily_life/features/spending/pages/spending_page.dart';
+import 'package:flutter_daily_life/shared/utils/utils.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -29,8 +30,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(_appBarTitles[_currentIndex]),
+      appBar: CustomAppBar(
+        title: _appBarTitles[_currentIndex],
       ),
       body: _buildPageContent(),
       bottomNavigationBar: _buildBottomNavigationBar(),

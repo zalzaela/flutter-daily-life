@@ -17,7 +17,7 @@ class _IncomePageState extends State<IncomePage> {
 
   late IncomeBloc incomeBloc;
 
-  bool _isLoadmore = true;
+  late bool _isLoadmore;
 
   @override
   void dispose() {
@@ -44,7 +44,6 @@ class _IncomePageState extends State<IncomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return BlocBuilder<IncomeBloc, IncomeState>(
       builder: (context, state) {
         return state.when(
@@ -84,8 +83,11 @@ class _IncomePageState extends State<IncomePage> {
                     : const SizedBox.shrink();
               } else {
                 final income = incomes[index];
-                String subs =
-                    "id: ${income.id},\ntitle: ${income.title},\namount: ${income.amount},\ntimestamp: ${DateFormatHelper.readableDateTime(income.timestamp.toDate())},\nstatus: ${income.status}";
+                final datetime = DateFormatHelper.readableDateTime(
+                    income.timestamp.toDate());
+                final amount =
+                    CurrencyIdrInputFormatter.convertToIdr(income.amount, 0);
+                // log.d(incomes.first.toString());
                 return GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -96,9 +98,25 @@ class _IncomePageState extends State<IncomePage> {
                       ),
                     );
                   },
-                  child: ListTile(
-                    title: Text(income.title),
-                    subtitle: Text(subs),
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        bottom: (incomes.length != index) ? 1 : 0),
+                    color: Colors.blue[50],
+                    child: ListTile(
+                      title: Text(income.title),
+                      subtitle: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(income.category),
+                          Column(
+                            children: [
+                              Text(datetime, style: const TextStyle(fontSize: 10)),
+                              Text(amount),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 );
               }

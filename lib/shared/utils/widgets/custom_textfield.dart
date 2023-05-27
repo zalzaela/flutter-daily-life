@@ -11,6 +11,7 @@ class CustomTextField extends StatelessWidget {
   final FocusNode? focusNode;
   final int? maxLines;
   final int? minLines;
+  final int? maxLength;
   final Widget? prefixIcon;
   final List<TextInputFormatter>? inputFormatters;
   const CustomTextField({
@@ -24,6 +25,7 @@ class CustomTextField extends StatelessWidget {
     this.prefixIcon,
     this.inputFormatters,
     this.minLines = 1,
+    this.maxLength = 30,
     this.maxLines = 1,
     required this.labelText,
   });
@@ -40,9 +42,11 @@ class CustomTextField extends StatelessWidget {
       inputFormatters: inputFormatters,
       minLines: minLines,
       maxLines: maxLines,
+      maxLength: maxLength,
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         labelText: labelText,
+        counterText: "",
       ),
     );
   }
