@@ -9,6 +9,8 @@ part 'income_bloc.freezed.dart';
 
 class IncomeBloc extends Bloc<IncomeEvent, IncomeState> {
   final IncomeRepository incomeRepository;
+  final int limit = 6;
+  bool isLoadmore = true;
 
   IncomeBloc({required this.incomeRepository})
       : super(const IncomeState.initial()) {
@@ -16,8 +18,8 @@ class IncomeBloc extends Bloc<IncomeEvent, IncomeState> {
       emit(const IncomeState.loading());
       try {
         await incomeRepository.addIncome(event.income);
-        final incomes = await incomeRepository.getIncomes();
-        emit(IncomeState.success(incomes));
+        final incomes = await incomeRepository.getIncomes(limit: limit);
+        emit(IncomeState.success(incomes, isLoadmore));
       } catch (e) {
         emit(const IncomeState.error('Failed to add income'));
       }
@@ -26,8 +28,8 @@ class IncomeBloc extends Bloc<IncomeEvent, IncomeState> {
     on<GetIncomes>((event, emit) async {
       emit(const IncomeState.loading());
       try {
-        final incomes = await incomeRepository.getIncomes();
-        emit(IncomeState.success(incomes));
+        final incomes = await incomeRepository.getIncomes(limit: limit);
+        emit(IncomeState.success(incomes, isLoadmore));
       } catch (e) {
         emit(const IncomeState.error('Failed to get incomes'));
       }
@@ -37,8 +39,8 @@ class IncomeBloc extends Bloc<IncomeEvent, IncomeState> {
       emit(const IncomeState.loading());
       try {
         await incomeRepository.updateIncome(event.income);
-        final incomes = await incomeRepository.getIncomes();
-        emit(IncomeState.success(incomes));
+        final incomes = await incomeRepository.getIncomes(limit: limit);
+        emit(IncomeState.success(incomes, isLoadmore));
       } catch (e) {
         emit(const IncomeState.error('Failed to update income'));
       }
@@ -48,10 +50,33 @@ class IncomeBloc extends Bloc<IncomeEvent, IncomeState> {
       emit(const IncomeState.loading());
       try {
         await incomeRepository.deleteIncome(event.incomeId);
-        final incomes = await incomeRepository.getIncomes();
-        emit(IncomeState.success(incomes));
+        final incomes = await incomeRepository.getIncomes(limit: limit);
+        emit(IncomeState.success(incomes, isLoadmore));
       } catch (e) {
         emit(const IncomeState.error('Failed to delete income'));
+      }
+    });
+
+    on<GetNextPage>((event, emit) async {
+      final currentState = state;
+      if (currentState is _Success) {
+        try {
+          final currentIncomes = currentState.incomes;
+          final lastIncome = currentIncomes.last;
+          final lastIncomeSnapshot =
+              await incomeRepository.getIncomeSnapshot(lastIncome.id);
+          final nextPageIncomes = await incomeRepository.getIncomes(
+            limit: currentIncomes.length + limit,
+            startAfter: lastIncomeSnapshot,
+          );
+          final allIncomes = currentIncomes + nextPageIncomes;
+          if(nextPageIncomes.isEmpty) {
+            isLoadmore = false;
+          }
+          emit(IncomeState.success(allIncomes, isLoadmore));
+        } catch (e) {
+          emit(const IncomeState.error('Failed to get next page'));
+        }
       }
     });
   }

@@ -20,6 +20,7 @@ mixin _$IncomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(IncomeModel income) addIncome,
     required TResult Function() getIncomes,
+    required TResult Function() getNextPage,
     required TResult Function(IncomeModel income) updateIncome,
     required TResult Function(String incomeId) deleteIncome,
   }) =>
@@ -28,6 +29,7 @@ mixin _$IncomeEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(IncomeModel income)? addIncome,
     TResult? Function()? getIncomes,
+    TResult? Function()? getNextPage,
     TResult? Function(IncomeModel income)? updateIncome,
     TResult? Function(String incomeId)? deleteIncome,
   }) =>
@@ -36,6 +38,7 @@ mixin _$IncomeEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(IncomeModel income)? addIncome,
     TResult Function()? getIncomes,
+    TResult Function()? getNextPage,
     TResult Function(IncomeModel income)? updateIncome,
     TResult Function(String incomeId)? deleteIncome,
     required TResult orElse(),
@@ -45,6 +48,7 @@ mixin _$IncomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(AddIncome value) addIncome,
     required TResult Function(GetIncomes value) getIncomes,
+    required TResult Function(GetNextPage value) getNextPage,
     required TResult Function(UpdateIncome value) updateIncome,
     required TResult Function(DeleteIncome value) deleteIncome,
   }) =>
@@ -53,6 +57,7 @@ mixin _$IncomeEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddIncome value)? addIncome,
     TResult? Function(GetIncomes value)? getIncomes,
+    TResult? Function(GetNextPage value)? getNextPage,
     TResult? Function(UpdateIncome value)? updateIncome,
     TResult? Function(DeleteIncome value)? deleteIncome,
   }) =>
@@ -61,6 +66,7 @@ mixin _$IncomeEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddIncome value)? addIncome,
     TResult Function(GetIncomes value)? getIncomes,
+    TResult Function(GetNextPage value)? getNextPage,
     TResult Function(UpdateIncome value)? updateIncome,
     TResult Function(DeleteIncome value)? deleteIncome,
     required TResult orElse(),
@@ -162,6 +168,7 @@ class _$AddIncome implements AddIncome {
   TResult when<TResult extends Object?>({
     required TResult Function(IncomeModel income) addIncome,
     required TResult Function() getIncomes,
+    required TResult Function() getNextPage,
     required TResult Function(IncomeModel income) updateIncome,
     required TResult Function(String incomeId) deleteIncome,
   }) {
@@ -173,6 +180,7 @@ class _$AddIncome implements AddIncome {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(IncomeModel income)? addIncome,
     TResult? Function()? getIncomes,
+    TResult? Function()? getNextPage,
     TResult? Function(IncomeModel income)? updateIncome,
     TResult? Function(String incomeId)? deleteIncome,
   }) {
@@ -184,6 +192,7 @@ class _$AddIncome implements AddIncome {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(IncomeModel income)? addIncome,
     TResult Function()? getIncomes,
+    TResult Function()? getNextPage,
     TResult Function(IncomeModel income)? updateIncome,
     TResult Function(String incomeId)? deleteIncome,
     required TResult orElse(),
@@ -199,6 +208,7 @@ class _$AddIncome implements AddIncome {
   TResult map<TResult extends Object?>({
     required TResult Function(AddIncome value) addIncome,
     required TResult Function(GetIncomes value) getIncomes,
+    required TResult Function(GetNextPage value) getNextPage,
     required TResult Function(UpdateIncome value) updateIncome,
     required TResult Function(DeleteIncome value) deleteIncome,
   }) {
@@ -210,6 +220,7 @@ class _$AddIncome implements AddIncome {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddIncome value)? addIncome,
     TResult? Function(GetIncomes value)? getIncomes,
+    TResult? Function(GetNextPage value)? getNextPage,
     TResult? Function(UpdateIncome value)? updateIncome,
     TResult? Function(DeleteIncome value)? deleteIncome,
   }) {
@@ -221,6 +232,7 @@ class _$AddIncome implements AddIncome {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddIncome value)? addIncome,
     TResult Function(GetIncomes value)? getIncomes,
+    TResult Function(GetNextPage value)? getNextPage,
     TResult Function(UpdateIncome value)? updateIncome,
     TResult Function(DeleteIncome value)? deleteIncome,
     required TResult orElse(),
@@ -281,6 +293,7 @@ class _$GetIncomes implements GetIncomes {
   TResult when<TResult extends Object?>({
     required TResult Function(IncomeModel income) addIncome,
     required TResult Function() getIncomes,
+    required TResult Function() getNextPage,
     required TResult Function(IncomeModel income) updateIncome,
     required TResult Function(String incomeId) deleteIncome,
   }) {
@@ -292,6 +305,7 @@ class _$GetIncomes implements GetIncomes {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(IncomeModel income)? addIncome,
     TResult? Function()? getIncomes,
+    TResult? Function()? getNextPage,
     TResult? Function(IncomeModel income)? updateIncome,
     TResult? Function(String incomeId)? deleteIncome,
   }) {
@@ -303,6 +317,7 @@ class _$GetIncomes implements GetIncomes {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(IncomeModel income)? addIncome,
     TResult Function()? getIncomes,
+    TResult Function()? getNextPage,
     TResult Function(IncomeModel income)? updateIncome,
     TResult Function(String incomeId)? deleteIncome,
     required TResult orElse(),
@@ -318,6 +333,7 @@ class _$GetIncomes implements GetIncomes {
   TResult map<TResult extends Object?>({
     required TResult Function(AddIncome value) addIncome,
     required TResult Function(GetIncomes value) getIncomes,
+    required TResult Function(GetNextPage value) getNextPage,
     required TResult Function(UpdateIncome value) updateIncome,
     required TResult Function(DeleteIncome value) deleteIncome,
   }) {
@@ -329,6 +345,7 @@ class _$GetIncomes implements GetIncomes {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddIncome value)? addIncome,
     TResult? Function(GetIncomes value)? getIncomes,
+    TResult? Function(GetNextPage value)? getNextPage,
     TResult? Function(UpdateIncome value)? updateIncome,
     TResult? Function(DeleteIncome value)? deleteIncome,
   }) {
@@ -340,6 +357,7 @@ class _$GetIncomes implements GetIncomes {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddIncome value)? addIncome,
     TResult Function(GetIncomes value)? getIncomes,
+    TResult Function(GetNextPage value)? getNextPage,
     TResult Function(UpdateIncome value)? updateIncome,
     TResult Function(DeleteIncome value)? deleteIncome,
     required TResult orElse(),
@@ -353,6 +371,126 @@ class _$GetIncomes implements GetIncomes {
 
 abstract class GetIncomes implements IncomeEvent {
   const factory GetIncomes() = _$GetIncomes;
+}
+
+/// @nodoc
+abstract class _$$GetNextPageCopyWith<$Res> {
+  factory _$$GetNextPageCopyWith(
+          _$GetNextPage value, $Res Function(_$GetNextPage) then) =
+      __$$GetNextPageCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetNextPageCopyWithImpl<$Res>
+    extends _$IncomeEventCopyWithImpl<$Res, _$GetNextPage>
+    implements _$$GetNextPageCopyWith<$Res> {
+  __$$GetNextPageCopyWithImpl(
+      _$GetNextPage _value, $Res Function(_$GetNextPage) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetNextPage implements GetNextPage {
+  const _$GetNextPage();
+
+  @override
+  String toString() {
+    return 'IncomeEvent.getNextPage()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetNextPage);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(IncomeModel income) addIncome,
+    required TResult Function() getIncomes,
+    required TResult Function() getNextPage,
+    required TResult Function(IncomeModel income) updateIncome,
+    required TResult Function(String incomeId) deleteIncome,
+  }) {
+    return getNextPage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(IncomeModel income)? addIncome,
+    TResult? Function()? getIncomes,
+    TResult? Function()? getNextPage,
+    TResult? Function(IncomeModel income)? updateIncome,
+    TResult? Function(String incomeId)? deleteIncome,
+  }) {
+    return getNextPage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(IncomeModel income)? addIncome,
+    TResult Function()? getIncomes,
+    TResult Function()? getNextPage,
+    TResult Function(IncomeModel income)? updateIncome,
+    TResult Function(String incomeId)? deleteIncome,
+    required TResult orElse(),
+  }) {
+    if (getNextPage != null) {
+      return getNextPage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AddIncome value) addIncome,
+    required TResult Function(GetIncomes value) getIncomes,
+    required TResult Function(GetNextPage value) getNextPage,
+    required TResult Function(UpdateIncome value) updateIncome,
+    required TResult Function(DeleteIncome value) deleteIncome,
+  }) {
+    return getNextPage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AddIncome value)? addIncome,
+    TResult? Function(GetIncomes value)? getIncomes,
+    TResult? Function(GetNextPage value)? getNextPage,
+    TResult? Function(UpdateIncome value)? updateIncome,
+    TResult? Function(DeleteIncome value)? deleteIncome,
+  }) {
+    return getNextPage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AddIncome value)? addIncome,
+    TResult Function(GetIncomes value)? getIncomes,
+    TResult Function(GetNextPage value)? getNextPage,
+    TResult Function(UpdateIncome value)? updateIncome,
+    TResult Function(DeleteIncome value)? deleteIncome,
+    required TResult orElse(),
+  }) {
+    if (getNextPage != null) {
+      return getNextPage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetNextPage implements IncomeEvent {
+  const factory GetNextPage() = _$GetNextPage;
 }
 
 /// @nodoc
@@ -431,6 +569,7 @@ class _$UpdateIncome implements UpdateIncome {
   TResult when<TResult extends Object?>({
     required TResult Function(IncomeModel income) addIncome,
     required TResult Function() getIncomes,
+    required TResult Function() getNextPage,
     required TResult Function(IncomeModel income) updateIncome,
     required TResult Function(String incomeId) deleteIncome,
   }) {
@@ -442,6 +581,7 @@ class _$UpdateIncome implements UpdateIncome {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(IncomeModel income)? addIncome,
     TResult? Function()? getIncomes,
+    TResult? Function()? getNextPage,
     TResult? Function(IncomeModel income)? updateIncome,
     TResult? Function(String incomeId)? deleteIncome,
   }) {
@@ -453,6 +593,7 @@ class _$UpdateIncome implements UpdateIncome {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(IncomeModel income)? addIncome,
     TResult Function()? getIncomes,
+    TResult Function()? getNextPage,
     TResult Function(IncomeModel income)? updateIncome,
     TResult Function(String incomeId)? deleteIncome,
     required TResult orElse(),
@@ -468,6 +609,7 @@ class _$UpdateIncome implements UpdateIncome {
   TResult map<TResult extends Object?>({
     required TResult Function(AddIncome value) addIncome,
     required TResult Function(GetIncomes value) getIncomes,
+    required TResult Function(GetNextPage value) getNextPage,
     required TResult Function(UpdateIncome value) updateIncome,
     required TResult Function(DeleteIncome value) deleteIncome,
   }) {
@@ -479,6 +621,7 @@ class _$UpdateIncome implements UpdateIncome {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddIncome value)? addIncome,
     TResult? Function(GetIncomes value)? getIncomes,
+    TResult? Function(GetNextPage value)? getNextPage,
     TResult? Function(UpdateIncome value)? updateIncome,
     TResult? Function(DeleteIncome value)? deleteIncome,
   }) {
@@ -490,6 +633,7 @@ class _$UpdateIncome implements UpdateIncome {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddIncome value)? addIncome,
     TResult Function(GetIncomes value)? getIncomes,
+    TResult Function(GetNextPage value)? getNextPage,
     TResult Function(UpdateIncome value)? updateIncome,
     TResult Function(DeleteIncome value)? deleteIncome,
     required TResult orElse(),
@@ -577,6 +721,7 @@ class _$DeleteIncome implements DeleteIncome {
   TResult when<TResult extends Object?>({
     required TResult Function(IncomeModel income) addIncome,
     required TResult Function() getIncomes,
+    required TResult Function() getNextPage,
     required TResult Function(IncomeModel income) updateIncome,
     required TResult Function(String incomeId) deleteIncome,
   }) {
@@ -588,6 +733,7 @@ class _$DeleteIncome implements DeleteIncome {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(IncomeModel income)? addIncome,
     TResult? Function()? getIncomes,
+    TResult? Function()? getNextPage,
     TResult? Function(IncomeModel income)? updateIncome,
     TResult? Function(String incomeId)? deleteIncome,
   }) {
@@ -599,6 +745,7 @@ class _$DeleteIncome implements DeleteIncome {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(IncomeModel income)? addIncome,
     TResult Function()? getIncomes,
+    TResult Function()? getNextPage,
     TResult Function(IncomeModel income)? updateIncome,
     TResult Function(String incomeId)? deleteIncome,
     required TResult orElse(),
@@ -614,6 +761,7 @@ class _$DeleteIncome implements DeleteIncome {
   TResult map<TResult extends Object?>({
     required TResult Function(AddIncome value) addIncome,
     required TResult Function(GetIncomes value) getIncomes,
+    required TResult Function(GetNextPage value) getNextPage,
     required TResult Function(UpdateIncome value) updateIncome,
     required TResult Function(DeleteIncome value) deleteIncome,
   }) {
@@ -625,6 +773,7 @@ class _$DeleteIncome implements DeleteIncome {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddIncome value)? addIncome,
     TResult? Function(GetIncomes value)? getIncomes,
+    TResult? Function(GetNextPage value)? getNextPage,
     TResult? Function(UpdateIncome value)? updateIncome,
     TResult? Function(DeleteIncome value)? deleteIncome,
   }) {
@@ -636,6 +785,7 @@ class _$DeleteIncome implements DeleteIncome {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddIncome value)? addIncome,
     TResult Function(GetIncomes value)? getIncomes,
+    TResult Function(GetNextPage value)? getNextPage,
     TResult Function(UpdateIncome value)? updateIncome,
     TResult Function(DeleteIncome value)? deleteIncome,
     required TResult orElse(),
@@ -662,7 +812,8 @@ mixin _$IncomeState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<IncomeModel> incomes) success,
+    required TResult Function(List<IncomeModel> incomes, bool isLoadmore)
+        success,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -670,7 +821,7 @@ mixin _$IncomeState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<IncomeModel> incomes)? success,
+    TResult? Function(List<IncomeModel> incomes, bool isLoadmore)? success,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -678,7 +829,7 @@ mixin _$IncomeState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<IncomeModel> incomes)? success,
+    TResult Function(List<IncomeModel> incomes, bool isLoadmore)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -767,7 +918,8 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<IncomeModel> incomes) success,
+    required TResult Function(List<IncomeModel> incomes, bool isLoadmore)
+        success,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -778,7 +930,7 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<IncomeModel> incomes)? success,
+    TResult? Function(List<IncomeModel> incomes, bool isLoadmore)? success,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -789,7 +941,7 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<IncomeModel> incomes)? success,
+    TResult Function(List<IncomeModel> incomes, bool isLoadmore)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -880,7 +1032,8 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<IncomeModel> incomes) success,
+    required TResult Function(List<IncomeModel> incomes, bool isLoadmore)
+        success,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -891,7 +1044,7 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<IncomeModel> incomes)? success,
+    TResult? Function(List<IncomeModel> incomes, bool isLoadmore)? success,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -902,7 +1055,7 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<IncomeModel> incomes)? success,
+    TResult Function(List<IncomeModel> incomes, bool isLoadmore)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -960,7 +1113,7 @@ abstract class _$$_SuccessCopyWith<$Res> {
           _$_Success value, $Res Function(_$_Success) then) =
       __$$_SuccessCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<IncomeModel> incomes});
+  $Res call({List<IncomeModel> incomes, bool isLoadmore});
 }
 
 /// @nodoc
@@ -974,12 +1127,17 @@ class __$$_SuccessCopyWithImpl<$Res>
   @override
   $Res call({
     Object? incomes = null,
+    Object? isLoadmore = null,
   }) {
     return _then(_$_Success(
       null == incomes
           ? _value._incomes
           : incomes // ignore: cast_nullable_to_non_nullable
               as List<IncomeModel>,
+      null == isLoadmore
+          ? _value.isLoadmore
+          : isLoadmore // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -987,7 +1145,8 @@ class __$$_SuccessCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Success implements _Success {
-  const _$_Success(final List<IncomeModel> incomes) : _incomes = incomes;
+  const _$_Success(final List<IncomeModel> incomes, this.isLoadmore)
+      : _incomes = incomes;
 
   final List<IncomeModel> _incomes;
   @override
@@ -998,8 +1157,11 @@ class _$_Success implements _Success {
   }
 
   @override
+  final bool isLoadmore;
+
+  @override
   String toString() {
-    return 'IncomeState.success(incomes: $incomes)';
+    return 'IncomeState.success(incomes: $incomes, isLoadmore: $isLoadmore)';
   }
 
   @override
@@ -1007,12 +1169,14 @@ class _$_Success implements _Success {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Success &&
-            const DeepCollectionEquality().equals(other._incomes, _incomes));
+            const DeepCollectionEquality().equals(other._incomes, _incomes) &&
+            (identical(other.isLoadmore, isLoadmore) ||
+                other.isLoadmore == isLoadmore));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_incomes));
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_incomes), isLoadmore);
 
   @JsonKey(ignore: true)
   @override
@@ -1025,10 +1189,11 @@ class _$_Success implements _Success {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<IncomeModel> incomes) success,
+    required TResult Function(List<IncomeModel> incomes, bool isLoadmore)
+        success,
     required TResult Function(String message) error,
   }) {
-    return success(incomes);
+    return success(incomes, isLoadmore);
   }
 
   @override
@@ -1036,10 +1201,10 @@ class _$_Success implements _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<IncomeModel> incomes)? success,
+    TResult? Function(List<IncomeModel> incomes, bool isLoadmore)? success,
     TResult? Function(String message)? error,
   }) {
-    return success?.call(incomes);
+    return success?.call(incomes, isLoadmore);
   }
 
   @override
@@ -1047,12 +1212,12 @@ class _$_Success implements _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<IncomeModel> incomes)? success,
+    TResult Function(List<IncomeModel> incomes, bool isLoadmore)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(incomes);
+      return success(incomes, isLoadmore);
     }
     return orElse();
   }
@@ -1096,9 +1261,11 @@ class _$_Success implements _Success {
 }
 
 abstract class _Success implements IncomeState {
-  const factory _Success(final List<IncomeModel> incomes) = _$_Success;
+  const factory _Success(
+      final List<IncomeModel> incomes, final bool isLoadmore) = _$_Success;
 
   List<IncomeModel> get incomes;
+  bool get isLoadmore;
   @JsonKey(ignore: true)
   _$$_SuccessCopyWith<_$_Success> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1168,7 +1335,8 @@ class _$_Error implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<IncomeModel> incomes) success,
+    required TResult Function(List<IncomeModel> incomes, bool isLoadmore)
+        success,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -1179,7 +1347,7 @@ class _$_Error implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<IncomeModel> incomes)? success,
+    TResult? Function(List<IncomeModel> incomes, bool isLoadmore)? success,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -1190,7 +1358,7 @@ class _$_Error implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<IncomeModel> incomes)? success,
+    TResult Function(List<IncomeModel> incomes, bool isLoadmore)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
